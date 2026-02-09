@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import Linkify from "react-linkify";
 import ReactMarkdown from "react-markdown";
 import rehypeExternalLinks from "rehype-external-links";
+import remarkGfm from "remark-gfm";
 import "./app.css";
 
 /* ───── Simulated chat data ───── */
@@ -44,6 +45,7 @@ function FixedLinkify({ content }) {
 function MarkdownRenderer({ content }) {
   return (
     <ReactMarkdown
+      remarkPlugins={[remarkGfm]}
       rehypePlugins={[[rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] }]]}
     >
       {content}

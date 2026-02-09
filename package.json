@@ -14,7 +14,8 @@
     "react-dom": "^19.2.0",
     "react-linkify": "^1.0.0-alpha",
     "react-markdown": "^9.1.0",
-    "rehype-external-links": "^3.0.0"
+    "rehype-external-links": "^3.0.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
